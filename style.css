@@ -15,15 +15,16 @@ h1 {
     text-align: center;
 }
 h2 {
+    float: inline-end;
     font-family: 'Times New Roman', Times, serif;
     font-size: 15;
     color: rgb(74, 2, 2);
     background-color: pink;
-    background-size: auto;
-    text-align: right;
+    background-size:cover;
     margin-top: 0%;
-    margin-bottom: 5px;
+    margin-bottom: 0;
     margin-right: 0%;
+    padding-top: 0px;;
 
 }
 p{
@@ -31,9 +32,12 @@ p{
     font-size: 11;
     color: rgb(0, 0, 0);
     background-size: auto;
-    text-align:center;
+    text-align:left;
+    padding-top: 15px;
 }
 #FirstBox{
+    background-color: grey;
+    box-sizing: border-box;
     size: 33%;
     float: left;
     max-width: 33%;
@@ -41,12 +45,13 @@ p{
     width:min-content;
     height: auto;
     padding: 10px;
-    margin-right: auto;
-    margin-left: auto;
-    border: 5px solid gray;
-    margin: 10px;
+    margin-right: 25px;
+    margin-left: 25px;
+    border: 5px solid rgb(0, 0, 0);
 }
 #SecondBox{
+    background-color: grey;
+    box-sizing: border-box;
     size: 33%;
     float: inline-start;
     max-width: 33%;
@@ -54,45 +59,78 @@ p{
     width:min-content;
     height:auto;
     padding: 10px;
-    border: 5px solid gray;
-    margin-right: auto;
-    margin-left: auto;
-    margin: 10px;
+    border: 5px solid rgb(0, 0, 0);
+    margin-right: 25px;
+    margin-left: 25px;
 }
 #ThirdBox{
+    background-color: grey;
+    box-sizing: border-box;
     size: 33%;
-    float:inline-end;
+    float:inline-start;
     max-width: 33%;
     min-width: 29%;
     width:min-content;
     height: auto;
     padding: 10px;
-    margin-right: auto;
-    margin-left: auto;
-    border: 5px solid gray;
-    margin: 10px;
+    margin-right: 25px;
+    margin-left: 25px;
+    border: 5px solid rgb(0, 0, 0);
+}
+@media screen and (min-width: 992px){
+    #FirstBox{
+        height: auto;
+    }
+    #SecondBox{
+        height: auto;
+    }
+    #ThirdBox{
+        height: auto;
+    }
+
 }
 @media screen and (max-width: 991px) and (min-width: 768px) {
     #FirstBox{
         float: left;
-        max-width: 49%;
-        object-fit: fill;
+        max-width: 47%;
+        min-width: 43%;
         height: auto;
+        margin: auto;
     }
     #SecondBox{
         float: inline-end;
-        max-width: 49%;
-        object-fit: fill;
-        width:fit-content;
+        max-width: 47%;
+        min-width: 43%;
         height:auto;
+        margin: auto;
     }
     #ThirdBox{
         float:inline-start;
-        max-width: 100%;
-        object-fit: fill;
-        width: fit-content;
-        width:min-content;
+        margin-top: 15px;
+        max-width: 97%;
+        min-width: 94%;
         height: auto;
     }
+    @media screen and (max-width: 767px) {
+        #FirstBox{
+            float: left;
+            max-width: 95%;
+            object-fit: fill;
+            height: auto;
+            margin: 20px;
+        }
+        #SecondBox{
+            float: left;
+            max-width: 95%;
+            height:auto;
+            margin: 20px;
+        }
+        #ThirdBox{
+            float:left;
+            max-width: 95%;
+            height: auto;
+            margin: 20px;
+        }
     
+    }
 }
